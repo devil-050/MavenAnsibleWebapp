@@ -9,6 +9,7 @@
         src: "/var/lib/jenkins/workspace/MavenAnsible-CICD/target/MavenAnsibleWebapp.war"
         dest: "/opt/tomcat/webapps/MavenAnsibleWebapp.war"
         remote_src: no
+      become: true
     - name:  Restart Tomcat
       systemd:
         name: tomcat
